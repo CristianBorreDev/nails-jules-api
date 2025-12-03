@@ -11,9 +11,9 @@ app.use(express.json());
 // Rutas
 const appointmentsRoutes = require("./routes/appointments.routes");
 
-app.use("/appointments", appointmentsRoutes);
+app.use("/api/appointments", appointmentsRoutes);
 
-app.get("/health", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.json({ status: "API OK" });
 });
 
