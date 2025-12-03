@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Admin = require('../models/admin.model'); // Ajusta la ruta según tu estructura
+const Admin = require('../models/admin.model');
 
 const MONGO_URI = process.env.MONGO_URI;
 
