@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 
 // Middlewares
@@ -12,7 +14,7 @@ app.use(express.json());
 const appointmentsRoutes = require("./routes/appointments.routes");
 
 app.use("/", (req, res) => {
-    res.json({ status: 200, message: "Api corriendo correctamente en el puerto: 3000" })
+    res.json({ status: 200, message: `🚀 API funcionando en http://localhost:${PORT}` })
 })
 
 app.use("/api/appointments", appointmentsRoutes);
