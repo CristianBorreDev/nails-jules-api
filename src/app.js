@@ -17,13 +17,13 @@ const clientsRoutes = require("./routes/clients.routes");
 const servicesRoutes = require("./routes/services.routes");
 const schedulesRoutes = require("./routes/schedules.routes");
 
-app.use("/api/auth", authRoutes);
-app.use("/api/appointments", appointmentsRoutes);
-app.use('/api/clients', clientsRoutes);
-app.use('/api/services', servicesRoutes);
-app.use('/api/schedules', schedulesRoutes);
+app.use("/auth", authRoutes);
+app.use("/appointments", appointmentsRoutes);
+app.use('/clients', clientsRoutes);
+app.use('/services', servicesRoutes);
+app.use('/schedules', schedulesRoutes);
 
-app.get("/api/health", (req, res) => {
+app.get("/health", (req, res) => {
   res.json({ status: "API OK" });
 });
 
